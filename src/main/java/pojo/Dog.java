@@ -1,5 +1,9 @@
-import java.time.Year;
+package pojo;
 
+import lombok.Builder;
+
+import java.time.Year;
+@Builder
 public class Dog {
     private int dogId;
     private String dogName;
@@ -29,6 +33,10 @@ public class Dog {
         } else {
             this.birthYear = this.birthYear + yearsToChange;
         }
+    }
+    @Override
+    public String toString(){
+        return this.dogId + "  " + this.dogName + " "+ this.birthYear;
     }
 }
 

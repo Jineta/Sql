@@ -1,3 +1,8 @@
+package pojo;
+
+import lombok.Builder;
+
+@Builder
 public class Owner {
     private int ownerId;
     private String ownerName;
@@ -12,5 +17,9 @@ public class Owner {
     }
     public String getOwnerName(){
         return ownerName;
+    }
+    @Override
+    public String toString(){
+        return this.ownerId + "  " + this.ownerName ;
     }
 }
