@@ -1,0 +1,24 @@
+CREATE SCHEMA `pets` ;
+
+CREATE TABLE `pets`.`dog` (
+  `dog_id` INT NOT NULL,
+  `dog_name` VARCHAR(45) NULL,
+  `birth_year` INT NULL,
+  PRIMARY KEY (`dog_id`));
+
+CREATE TABLE `pets`.`owner` (
+  `owner_id` INT NOT NULL,
+  `owner_name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`owner_id`));
+
+INSERT INTO pets.dog(dog_id,dog_name,birth_year) VALUES
+ (1, "Charli", 2020),
+ (2, "Rem", 2015),
+ (3, "Spanki", 2016),
+ (4, "Grin", 2021);
+
+ INSERT INTO pets.owner(owner_id,owner_name) VALUES
+ (1, "Pasha"),
+ (2, "Slava"),
+ (3, "Inna"),
+ (4, "Misha");
